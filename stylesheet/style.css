@@ -1,13 +1,14 @@
 :root {
-    --white: #FFFFFF;
-    --black: #000000;
+  --white: #FFFFFF;
+  --black: #000000;
 
-    --primaryFont: 'Roboto', Arial, sans-serif;
-    --secondaryFont: 'Staatliches', 'Bebas Neue', cursive;
-    --tertiaryFont: 'Lato', Arial, Helvetica, cursive;
+  --primaryFont: 'Roboto', Arial, sans-serif;
+  --secondaryFont: 'Staatliches', 'Bebas Neue', cursive;
+  --tertiaryFont: 'Lato', Arial, Helvetica, cursive;
 }
 :root[data-theme="light"] {
   --text: #0a1117;
+  --text-placeholders: #232a31;
   --background: #fbfcfd;
   --primary: #4786bc;
   --secondary: #93badc;
@@ -15,9 +16,66 @@
 }
 :root[data-theme="dark"] {
   --text: #eaf0f6;
+  --text-placeholders: #a9b2bb;
   --background: #020303;
   --primary: #4281b8;
   --secondary: #234a6c;
   --accent: #285d8a;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Globals*/
+
+body {
+  background-color: var(--background);
+  font-size: 1.6rem;
+  font-family: var(--primaryFont);
+}
+
+h1, h2, h3 {
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+span{
+  color: var(--text);
+  font-weight: 700;
+}
+
+.placeholder {
+  color: var(--text-placeholders);
+  font-family: var(--primaryFont);
+  font-weight: 400;
+}
+
+/*Header*/
+.header {
+  justify-content: start;
+}
+
+/*Flex*/
+
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1 1;
+}
+
+.languages {
+  padding: 1.5rem;
+  justify-content: center;
+  gap: 1.5rem;
+}
