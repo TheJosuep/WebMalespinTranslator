@@ -1,0 +1,23 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --primaryFont: 'Roboto', Arial, sans-serif;
+    --secondaryFont: 'Staatliches', 'Bebas Neue', cursive;
+    --tertiaryFont: 'Lato', Arial, Helvetica, cursive;
+}
+:root[data-theme="light"] {
+  --text: #0a1117;
+  --background: #fbfcfd;
+  --primary: #4786bc;
+  --secondary: #93badc;
+  --accent: #73a8d6;
+}
+:root[data-theme="dark"] {
+  --text: #eaf0f6;
+  --background: #020303;
+  --primary: #4281b8;
+  --secondary: #234a6c;
+  --accent: #285d8a;
+}
+
