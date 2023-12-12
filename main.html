@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="stylesheet/style.css">
 </head>
 <body>
-    <header class="header">
+    <header>
         <h2><a href="main.html">Traductor Malespín</a></h2>
     </header>
         
@@ -21,24 +21,45 @@
         <!-- <button id="theme-toggle-button">Toggle Theme</button> -->
 
         <div class="translator-space">
+
+            <!-- Language selector -->
+
             <div class="flex languages">
-                <div>
-                    <span class="font-semibold">Español</span>
+                <div class="flex">
+                    <button class="flex items-center cursor-pointer rounded">
+                        <span class="padding-icon-horizontal font-semibold">Español</span>
+                        <img class="icon" src="/res/expand_more.svg" alt="Show more">
+                    </button>
                 </div>
-                <div>
-                    <span class="font-semibold">Malespín</span>
+
+                <div class="flex items-center">
+                    <button class="cursor-pointer rounded">
+                        <img class="padding-icon-vertical margin-icon-horizontal" src="/res/swap_horizontal.svg" alt="Swap">
+                    </button>
+                </div>
+
+                <div class="flex">
+                    <button class="flex items-center cursor-pointer rounded">
+                        <span class="padding-icon-horizontal font-semibold">Malespín</span>
+                        <img src="/res/expand_more.svg" alt="Show more">
+                    </button>
                 </div>  
             </div>
             
+            <!-- Translation boxes -->
+
             <div class="flex translation">
-                <section>
-                    <textarea class="placeholder" placeholder="Ingresar texto"></textarea>
+                <section class="translation-item">
+                    <textarea class="placeholder textarea-input fill-horizontally rounded"
+                    placeholder="Ingresar texto"
+                    autocomplete="true"
+                    autocapitalize="sentences"></textarea>
                 </section>
                 
                 <div></div>
 
-                <section>
-                    <textarea class="placeholder" placeholder="Traducción"></textarea>
+                <section class="translation-item">
+                    <textarea class="placeholder textarea-output fill-horizontally rounded" placeholder="Traducción" disabled></textarea>
                 </section>
             </div>
         </div>
@@ -59,6 +80,6 @@
         if (themeToggleButton) {
           themeToggleButton.addEventListener('click', toggleTheme);
         }
-      </script>
+    </script>
 </body>
 </html>
