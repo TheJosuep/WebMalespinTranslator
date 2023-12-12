@@ -136,6 +136,10 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+header a {
+  color: var(--text);
+}
+
 /* Language selector */
 
 .languages {
