@@ -50,7 +50,8 @@
 
             <div class="flex translation">
                 <section class="translation-item">
-                    <textarea class="placeholder textarea-input fill-horizontally rounded"
+                    <textarea id="txtaInput" oninput="checkTextSize(); onInputChange()" rows="5"
+                    class="textarea-input placeholder fill-horizontally rounded"
                     placeholder="Ingresar texto"
                     autocomplete="true"
                     autocapitalize="sentences"></textarea>
@@ -59,7 +60,10 @@
                 <div></div>
 
                 <section class="translation-item">
-                    <textarea class="placeholder textarea-output fill-horizontally rounded" placeholder="Traducción" disabled></textarea>
+                    <textarea id="txtaOutput" oninput="checkTextSize()" rows="5"
+                    class="textarea-output placeholder fill-horizontally rounded"
+                    placeholder="Traducción"
+                    disabled></textarea>
                 </section>
             </div>
         </div>
@@ -67,19 +71,6 @@
 
     <footer></footer>
 
-    <script>
-        // Function to toggle between light and dark themes
-        function toggleTheme() {
-          const currentTheme = document.documentElement.getAttribute('data-theme');
-          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-          document.documentElement.setAttribute('data-theme', newTheme);
-        }
-      
-        // Add an event listener to an element that triggers the theme toggle
-        const themeToggleButton = document.getElementById('theme-toggle-button');
-        if (themeToggleButton) {
-          themeToggleButton.addEventListener('click', toggleTheme);
-        }
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

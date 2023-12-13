@@ -157,7 +157,14 @@ header a {
 }
 
 .translation textarea {
+  overflow-y: auto;
+  overflow: hidden;
   font-size: large;
+}
+
+.translation textarea.textarea-smaller-text {
+  font-size: medium;
+  transition: font-size 0.3s ease;
 }
 
 .translation-item {
